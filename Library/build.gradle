@@ -7,6 +7,7 @@ android {
     compileSdk 31
 
     defaultConfig {
+        applicationId "com.github.juantobon20.library"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -23,8 +24,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -35,8 +36,8 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'maven'
 
-    sourceCompatibility = 1.8 // java 8
-    targetCompatibility = 1.8
+    sourceCompatibility = JavaVersion.VERSION_11 // java 8
+    targetCompatibility =  JavaVersion.VERSION_11
 
     task sourcesJar(type: Jar, dependsOn: classes) {
         classifier = 'sources'
